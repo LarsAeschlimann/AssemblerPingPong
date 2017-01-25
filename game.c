@@ -50,7 +50,7 @@ void initGame(void)
 	ball.color  	= BALL_COLOR;
 }
 
-void DrawShapesRectangle(struct_GraphicRectangle player)
+void DrawShapesRectangle(struct_GraphicRectangle &player)
 {
     /*LCD_DrawRectF(LEFT,0,WIDTH,position,GUI_COLOR_BLACK);
     LCD_DrawRectF(LEFT,position,WIDTH,HEIGHT,GUI_COLOR_RED);
@@ -58,14 +58,14 @@ void DrawShapesRectangle(struct_GraphicRectangle player)
     
     LCD_DrawRectF(player1.x,0,player1.width,player1.y,GUI_COLOR_BLACK);
     LCD_DrawRectF(player1.x,player1.y,player1.width,player1.height,player1.color);
-    LCD_DrawRectF(player1.x,player1.y + player1.height,player1.width,SCREENWIDTH,GUI_COLOR_BLACK);
+    LCD_DrawRectF(player1.x,player1.y + player1.height,player1.width,SCREEN_HEIGHT,GUI_COLOR_BLACK);
     
     LCD_DrawRectF(player2.x,0,player2.width,player2.y,GUI_COLOR_BLACK);
     LCD_DrawRectF(player2.x,player2.y,player2.width,player2.height,player2.color);
-    LCD_DrawRectF(player2.x,player2.y + player2.height,player2.width,SCREEN_WIDTH,GUI_COLOR_BLACK);
+    LCD_DrawRectF(player2.x,player2.y + player2.height,player2.width,SCREEN_HEIGHT,GUI_COLOR_BLACK);
 }
 
-void DrawShapesCircle(struct_GraphicCircle ball)
+void DrawShapesCircle(struct_GraphicCircle &ball)
 {
     LCD_DrawCircle(ball.x,ball.y,ball.radius,ball.color);
 }
